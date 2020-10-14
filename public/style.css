@@ -23,13 +23,13 @@ video {
 }
 
 .left{
-    flex: 1;
+    flex: 0.8;
     display: flex;
     flex-direction: column;
 }
 
 .right {
-    /* flex: 0.2; */
+    flex: 0.2;
     /* background-color: rgb(59, 55, 63); */
 
 }
@@ -63,4 +63,17 @@ video {
     align-items: center;
     min-width: 80px;
     cursor: pointer;
+}
+
+.mainControlsButton i {
+    font-size: 24px;
+}
+
+.mainControlsButton:hover {
+    background-color: rgb(135, 111, 158);
+    border-radius: 15px;
+}
+
+.leaveMeeting {
+    color: rgb(199, 24, 24);
 }
