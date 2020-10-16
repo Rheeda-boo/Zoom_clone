@@ -7,6 +7,7 @@ body {
     display: flex;
     justify-content: center;
     
+    
 }
 
 video {
@@ -26,11 +27,17 @@ video {
     flex: 0.8;
     display: flex;
     flex-direction: column;
+    
 }
 
 .right {
     flex: 0.2;
-    /* background-color: rgb(59, 55, 63); */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(59, 55, 63);
+    border-left: 1px solid rgb(85, 79, 92) ;
+    
+
 
 }
 
@@ -40,6 +47,7 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid rgb(85, 79, 92) ;
 }
 
 .controls {
@@ -76,4 +84,26 @@ video {
 
 .leaveMeeting {
     color: rgb(199, 24, 24);
+}
+
+.mainHeader {
+    color: floralwhite;
+    text-align: center;
+}
+
+.chatWindow {
+    flex-grow: 1;
+}
+
+.msgContainer{
+    padding: 22px 12px;
+    display: flex;
+}
+
+.msgContainer input {
+    flex-grow: 1;
+    background-color: transparent ;
+    color: floralwhite;
+    border: none;
+
 }
