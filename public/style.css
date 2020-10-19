@@ -117,3 +117,7 @@ video {
     text-decoration: none;
     list-style: none;
 }
+
+.unmute {
+    color: red;
+}
