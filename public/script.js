@@ -1,4 +1,3 @@
-
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 
@@ -31,6 +30,21 @@ navigator.mediaDevices.getUserMedia({
     socket.on("user-connected", (userId) => {
         connectToNewUser(userId, stream);
     })
+
+    let text = $("input")
+console.log(text)
+
+$("html").keydown((e) => {
+    if (e.which == 13 && text.val().length !== 0) {
+        console.log(text.val());
+        socket.emit("message", text.val ());
+        text.val("")
+    }
+});
+
+socket.on("createMessage", message => {
+    $(".msgs").append(`<li class = "msgs"><b>user</b><br/>${message}</li>`)
+})
 })
 
 peer.on("open", id => {
@@ -57,3 +71,4 @@ const addVideoStream = (video, stream) => {
 
     videoGrid.append(video);
 }
+

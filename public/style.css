@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 #video-grid {
@@ -14,7 +15,7 @@ video {
     height: 300px;
     width: 400px;
     object-fit: cover;
-    /* padding: 10px; */
+    padding: 5px;
 
 }
 
@@ -47,6 +48,7 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
     border-bottom: 1px solid rgb(85, 79, 92) ;
 }
 
@@ -55,12 +57,12 @@ video {
     background-color: rgb(59, 55, 63);
     color: white;
     padding: 5px;
-    justify-content: space-between;
+    justify-content: space-between;    
 }
 
 .controlBlock {
     display: flex;
-
+    
 }
 
 .mainControlsButton{
@@ -89,6 +91,7 @@ video {
 .mainHeader {
     color: floralwhite;
     text-align: center;
+    
 }
 
 .chatWindow {
