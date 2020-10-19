@@ -43,16 +43,14 @@ $("html").keydown((e) => {
 });
 
 socket.on("createMessage", message => {
-    $(".msgs").append(`<li class = "msgs"><b>user</b><br/>${message}</li>`)
-})
+    $(".msgs").append(`<li class = "msgs"><b>user</b><br/>${message}</li>`);
+    scrollToBotton()
+    })
 })
 
 peer.on("open", id => {
     socket.emit("join-room", ROOM_ID, id);
 })
-
-
-
 
 const connectToNewUser = (userId, stream) => {
     const call  = peer.call(userId, stream)
@@ -61,7 +59,6 @@ const connectToNewUser = (userId, stream) => {
         addVideoStream(video, userVideoStream)
     })
 }
-
 
 const addVideoStream = (video, stream) => {
      video.srcObject = stream;
@@ -72,3 +69,7 @@ const addVideoStream = (video, stream) => {
     videoGrid.append(video);
 }
 
+const scrollToBotton = () => {
+    let d = $(".chatWindow");
+    d.scrollTop(d.prop("scrollHeight"));
+}
