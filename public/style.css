@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    color: white;
+    
 }
 
 #video-grid {
@@ -109,4 +109,10 @@ video {
     color: floralwhite;
     border: none;
 
+}
+
+.msgs {
+    color: white;
+    text-decoration: none;
+    list-style: none;
 }
